@@ -1,0 +1,439 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2147 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(Predictive Maintenance of Industrial Machines Using Machine Learning) Tj
+T*
+() Tj
+T*
+(by) Tj
+T*
+() Tj
+T*
+(Abdul Sami \(2023-uam-1875\)) Tj
+T*
+(Hasham Rao \(2023-uam-1923\)) Tj
+T*
+() Tj
+T*
+(A Project Report submitted in fulfillment of the requirements for Semester Project of) Tj
+T*
+(Machine Learning \(DS-508\)) Tj
+T*
+() Tj
+T*
+(Muhammad Nasir Siddique) Tj
+T*
+(Supervisor) Tj
+T*
+() Tj
+T*
+(Department of Computer Science) Tj
+T*
+(MNS-University of Agriculture, Multan) Tj
+T*
+(May, 2026) Tj
+T*
+() Tj
+T*
+(DECLARATION) Tj
+T*
+() Tj
+T*
+(This Machine Learning project report is submitted to the Department of Computer Science,) Tj
+T*
+(MNS-University of Agriculture, Multan, to partially fulfill the requirements of the semester) Tj
+T*
+(project. We declare that this project work has been completed for academic purposes and has) Tj
+T*
+(not been submitted elsewhere for any degree, diploma, or publication.) Tj
+T*
+() Tj
+T*
+(Abdul Sami) Tj
+T*
+(Roll: 2023-uam-1875) Tj
+T*
+() Tj
+T*
+(Hasham Rao) Tj
+T*
+(Roll: 2023-uam-1923) Tj
+T*
+() Tj
+T*
+(ACKNOWLEDGEMENTS) Tj
+T*
+() Tj
+T*
+(We express our sincere gratitude to Muhammad Nasir Siddique, Department of Computer Science,) Tj
+T*
+(MNS-University of Agriculture, Multan, for his guidance and support during this project. We) Tj
+T*
+(also thank our department, teachers, classmates, and friends for their cooperation and) Tj
+T*
+(encouragement throughout the completion of this work.) Tj
+T*
+() Tj
+T*
+(ABSTRACT) Tj
+T*
+() Tj
+T*
+(Industrial machines rarely fail without warning signs. Sensor features such as air) Tj
+T*
+(temperature, process temperature, rotational speed, torque, and tool wear can shift before) Tj
+T*
+(breakdown. This project develops a supervised machine-learning workflow for early) Tj
+T*
+(machine-failure prediction using the AI4I 2020 predictive-maintenance dataset structure.) Tj
+T*
+(Five classifiers are trained and compared: Logistic Regression, K-Nearest Neighbors, Naive) Tj
+T*
+(Bayes, Decision Tree, and Support Vector Machine. Evaluation uses accuracy, precision,) Tj
+T*
+(recall, F1-score, ROC-AUC, confusion matrices, and ROC curves. Recall and F1-score are) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 2442 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(emphasized because a missed failure is usually more serious than a false maintenance alert.) Tj
+T*
+() Tj
+T*
+(Keywords: Predictive Maintenance, Industrial Machines, Machine Learning, KNN, Naive Bayes,) Tj
+T*
+(Decision Tree, SVM, Logistic Regression.) Tj
+T*
+() Tj
+T*
+(LIST OF ABBREVIATIONS) Tj
+T*
+() Tj
+T*
+(MNSUAM: MNS-University of Agriculture, Multan) Tj
+T*
+(CS: Computer Science) Tj
+T*
+(ML: Machine Learning) Tj
+T*
+(KNN: K-Nearest Neighbors) Tj
+T*
+(SVM: Support Vector Machine) Tj
+T*
+(LR: Logistic Regression) Tj
+T*
+(DT: Decision Tree) Tj
+T*
+(AI4I: Artificial Intelligence for Industries) Tj
+T*
+(ROC-AUC: Receiver Operating Characteristic Area Under Curve) Tj
+T*
+() Tj
+T*
+(CHAPTER I: Introduction) Tj
+T*
+() Tj
+T*
+(1.1 Overview) Tj
+T*
+() Tj
+T*
+(Predictive maintenance is the use of data and machine-learning models to estimate failure) Tj
+T*
+(risk before a machine breaks down. Traditional reactive maintenance starts after failure has) Tj
+T*
+(already caused downtime. Preventive maintenance schedules service at fixed intervals, but) Tj
+T*
+(this may replace parts too early or too late. Predictive maintenance is more flexible) Tj
+T*
+(because it uses current machine-condition signals.) Tj
+T*
+() Tj
+T*
+(In industrial environments, sensors record temperature, speed, torque, and tool wear. These) Tj
+T*
+(readings can contain early warning patterns. A machine-learning model can learn from) Tj
+T*
+(historical examples and classify new machine states as normal or risky.) Tj
+T*
+() Tj
+T*
+(1.2 Project Goals) Tj
+T*
+() Tj
+T*
+(The aim of this project is to build and evaluate a predictive-maintenance model for) Tj
+T*
+(industrial machines. The project compares multiple algorithms and selects the strongest) Tj
+T*
+(model using balanced metrics. The main research question is: which machine-learning model) Tj
+T*
+(can most reliably predict industrial machine failure using sensor features?) Tj
+T*
+() Tj
+T*
+(CHAPTER II: Literature Review) Tj
+T*
+() Tj
+T*
+(Predictive maintenance is an important application of Industry 4.0 and smart manufacturing.) Tj
+T*
+(Data-driven maintenance systems use sensor readings to detect patterns that may not be) Tj
+T*
+(visible through manual inspection. Classification algorithms are useful when the goal is to) Tj
+T*
+(predict a binary target such as failure or no failure.) Tj
+T*
+() Tj
+T*
+(Logistic Regression is a common baseline for binary prediction because it estimates failure) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Length 2516 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(probability. KNN compares new records with similar historical sensor records. Naive Bayes is) Tj
+T*
+(a fast probabilistic classifier. Decision Tree models are easy to interpret because they) Tj
+T*
+(produce rule-based splits. SVM can perform well when a clear separating boundary exists) Tj
+T*
+(between classes.) Tj
+T*
+() Tj
+T*
+(Previous predictive-maintenance studies show that accuracy alone can be misleading when) Tj
+T*
+(failures are rare. A model can achieve high accuracy by predicting the majority class while) Tj
+T*
+(missing true failures. Therefore, recall, precision, F1-score, and ROC-AUC are important for) Tj
+T*
+(model selection.) Tj
+T*
+() Tj
+T*
+(CHAPTER III: Project Description) Tj
+T*
+() Tj
+T*
+(3.1 Dataset Source) Tj
+T*
+() Tj
+T*
+(The intended dataset is the Kaggle AI4I 2020 predictive-maintenance dataset. It contains) Tj
+T*
+(10,000 machine records and 14 columns. The project includes a Kaggle API download script and) Tj
+T*
+(an offline AI4I-compatible dataset generator for environments where Kaggle access is) Tj
+T*
+(unavailable.) Tj
+T*
+() Tj
+T*
+(3.2 Dataset Features) Tj
+T*
+() Tj
+T*
+(The main input features are Type, Air temperature [K], Process temperature [K], Rotational) Tj
+T*
+(speed [rpm], Torque [Nm], and Tool wear [min]. The target variable is Machine failure. The) Tj
+T*
+(dataset also contains failure-mode columns: TWF, HDF, PWF, OSF, and RNF.) Tj
+T*
+() Tj
+T*
+(CHAPTER IV: Data Analysis and Processing) Tj
+T*
+() Tj
+T*
+(The preprocessing pipeline validates that all required columns exist. Identifier columns are) Tj
+T*
+(kept in the dataset but excluded from model features. Machine type is categorical, so it is) Tj
+T*
+(one-hot encoded. Numeric sensor columns are scaled for Logistic Regression, KNN, Naive) Tj
+T*
+(Bayes, and SVM because these models are sensitive to feature magnitude. Decision Tree does) Tj
+T*
+(not require scaling.) Tj
+T*
+() Tj
+T*
+(The data is split into training and testing sets using stratification so that failure and) Tj
+T*
+(non-failure classes remain proportionally represented. Class imbalance is handled through) Tj
+T*
+(class weights in Logistic Regression, Decision Tree, and SVM.) Tj
+T*
+() Tj
+T*
+(CHAPTER V: Algorithm and Performance Analysis) Tj
+T*
+() Tj
+T*
+(5.1 Logistic Regression) Tj
+T*
+() Tj
+T*
+(Logistic Regression estimates the probability that a machine will fail. It is used as a) Tj
+T*
+(mathematical baseline and supports class weighting for imbalanced data.) Tj
+T*
+() Tj
+T*
+(5.2 K-Nearest Neighbors) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 2165 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(KNN classifies a machine based on the labels of nearby records in feature space. It requires) Tj
+T*
+(scaling because distance calculations are affected by feature magnitudes.) Tj
+T*
+() Tj
+T*
+(5.3 Naive Bayes) Tj
+T*
+() Tj
+T*
+(Naive Bayes applies Bayes' theorem and assumes features are conditionally independent given) Tj
+T*
+(the class. It is fast and useful as a probabilistic baseline.) Tj
+T*
+() Tj
+T*
+(5.4 Decision Tree) Tj
+T*
+() Tj
+T*
+(Decision Tree learns interpretable rules such as high tool wear, high torque, or abnormal) Tj
+T*
+(temperature relationships. It is easy to explain but can overfit if not constrained.) Tj
+T*
+() Tj
+T*
+(5.5 Support Vector Machine) Tj
+T*
+() Tj
+T*
+(SVM finds a separating boundary between failure and non-failure classes. The project uses an) Tj
+T*
+(RBF kernel and probability estimates for ROC-AUC calculation.) Tj
+T*
+() Tj
+T*
+(5.6 Evaluation) Tj
+T*
+() Tj
+T*
+(The project evaluates models with accuracy, precision, recall, F1-score, ROC-AUC, confusion) Tj
+T*
+(matrix, and ROC curve. Recall is especially important because a false negative means a real) Tj
+T*
+(machine failure was missed.) Tj
+T*
+() Tj
+T*
+(5.7 Results) Tj
+T*
+() Tj
+T*
+(Model results are generated by running python scripts/train_models.py.) Tj
+T*
+() Tj
+T*
+(CHAPTER VI: Conclusion) Tj
+T*
+() Tj
+T*
+(This project builds a complete predictive-maintenance workflow for industrial machines. It) Tj
+T*
+(prepares an AI4I-style dataset, trains five machine-learning classifiers, compares them) Tj
+T*
+(using balanced metrics, and generates report figures and a final academic report. The best) Tj
+T*
+(model is selected using F1-score, recall, and ROC-AUC rather than accuracy alone. Future) Tj
+T*
+(improvements may include Random Forest, XGBoost, SHAP feature explanation, real-time IoT) Tj
+T*
+(integration, and dashboard-based maintenance alerts.) Tj
+T*
+() Tj
+T*
+(REFERENCES) Tj
+T*
+() Tj
+T*
+(* Kaggle AI4I 2020 Predictive Maintenance Dataset.) Tj
+T*
+(* UCI Machine Learning Repository: AI4I 2020 Predictive Maintenance Dataset.) Tj
+T*
+(* Scikit-learn documentation for supervised classification algorithms and evaluation) Tj
+T*
+(metrics.) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 5 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [6 0 R 7 0 R 8 0 R 9 0 R] /Count 4 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000002278 00000 n 
+0000004772 00000 n 
+0000007340 00000 n 
+0000009557 00000 n 
+0000009684 00000 n 
+0000009811 00000 n 
+0000009938 00000 n 
+0000010065 00000 n 
+0000010141 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+10192
+%%EOF
